@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" >
+
+    <title>Hello, world!</title>
+  </head>
+   <body>
+     <div class="container">
+       <h1>TEste</h1>
+       <div>
+         <button class="btn btn-info" id="botao">Abrir</button>
+       </div>
+       <div class="alert alert-primary" id="mensagem">
+
+       </div>
+       <div>
+         <form>
+           <div class="form-group">
+             <label for="telefone">Telefone</label>
+             <input type="text" class="form-control" id="telefone">
+           </div>
+           <div class="form-group">
+              <label for="cep">CEP</label>
+              <input type="text" class="form-control" id="cep">
+            </div>
+            <div class="form-group">
+                <label for="cpd">CPF</label>
+                <input type="text" class="form-control" id="cpf">
+              </div>
+         </form>
+       </div>
+    </div>
+    
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="bootstrap/js/jquery-3.3.1.slim.min.js" ></script>
+    <script src="mask/jquery.mask.min.js" ></script>
+
+    <script src="bootstrap/js/popper.min.js" ></script>
+    <script src="bootstrap/js/bootstrap.min.js" ></script>
+   
+    <script>
+
+    $(document).ready(function(){
+
+      $('#cep').mask('00000-000');
+      $('#cpf').mask('000.000.000-00');
+
+
+      $('#mensagem').hide()
+      $('h1').text('MArcio');
+      let text='<p>O Imundo!<p>'
+      $('h1').append(text)
+
+      let mensagemTexto='Mensagem teste'
+
+      $('#botao').click(function(){
+        
+          $('#mensagem').show();
+          $('#mensagem').text(mensagemTexto);
+        
+          $('h1').css('color','red')
+
+          
+       
+      })
+
+
+
+
+      
+
+    });
+
+
+
+       
+     
+       
+    
+    </script>
+  </body>
+</html>
